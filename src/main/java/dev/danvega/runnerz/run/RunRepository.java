@@ -61,7 +61,7 @@ public class RunRepository {
     }
 
     public int count() {
-        return jdbcClient.sql("select count(*) from run")
+        return jdbcClient.sql("select * from run")
                 .query().listOfRows().size();
     }
 
