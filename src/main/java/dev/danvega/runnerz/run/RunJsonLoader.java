@@ -14,11 +14,11 @@ import java.io.InputStream;
 public class RunJsonLoader implements CommandLineRunner {
 
     private static final Logger log = LoggerFactory.getLogger(RunJsonLoader.class);
-    private final RunRepository runRepository;
+    private final JdbcClientRunRepository runRepository;
     private final ObjectMapper objectMapper;
 
-    public RunJsonLoader(RunRepository runRepository, ObjectMapper objectMapper) {
-        this.runRepository = runRepository;
+    public RunJsonLoader(JdbcClientRunRepository jdbcClientRunRepository, ObjectMapper objectMapper) {
+        this.runRepository = jdbcClientRunRepository;
         this.objectMapper = objectMapper;
     }
 
